@@ -1,0 +1,25 @@
+# StaffM Configuration
+
+[general]
+# The permission node required to be tracked as staff
+staff-permission = "staffm.track"
+# Minimum weekly playtime quota (in minutes)
+weekly-quota = 600
+
+[database]
+# Options: "h2" (local file) or "mysql"
+type = "h2"
+host = "localhost"
+port = 3306
+database = "staffm"
+username = "root"
+password = "password"
+table-prefix = "staffm_"
+
+[messages]
+prefix = "<gradient:#00AAFF:#0055FF><bold>StaffM</bold></gradient> <dark_gray>»</dark_gray> "
+reload-success = "<green>Configuration reloaded successfully.</green>"
+no-permission = "<red>You do not have permission to use this command.</red>"
+quota-failed = "<red>You have not met your weekly quota of %quota% minutes.</red>"
+stats-header = "<gold>--- Staff Statistics: <yellow>%player%</yellow> ---"
+stats-entry = "<gray>%period%: <white>%time% minutes"
